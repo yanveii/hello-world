@@ -1,0 +1,47 @@
+import java.util.HashMap;
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+         Map<Integer,Integer> map=new HashMap<>();
+		for(int i=0;i<nums.length;i++){ //第一次哈希 使之进入
+			map.put(nums[i],i);
+		}
+		//int com=0;
+		for(int i=0;i<nums.length;i++){
+			int com=target-nums[i];
+		//	if(map.containsKey(com)&&com!=nums[i]){ //不能是两个重复的元素
+            if(map.containsKey(com)&&map.get(com)!=i)
+				//int[] res={i,map.get(com)};  //这句话报错 error:variable declaration not allowed here
+                                                   //因为括号删除错了导致报错
+				//注意 map.get()的用法
+				//获取hashmap中键为com的值
+                return new int[]{i,map.get(com)};
+		}
+		
+		return nums;  //居然也不可以通过了
+     // throw new IllegalArgumentException("No two sum solution");
+    }
+    
+   /* public int[] twoSum(int[] nums,int target){ //暴力破解法
+        for(int i=0;i<nums.length-1;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(target==nums[i]+nums[j]){
+                    int[] res={i,j};
+                    return res;
+                }
+            }
+        }
+        return nums;
+    }*/
+     
+    public static void printArr(int[] nums){
+        for(int num:nums){
+            System.out.println(num);
+       
+        }
+    }
+    public static void main(String[] args){
+        int[] nums={};
+        int target=0;
+        printArr((new Solution()).twoSum(nums,target));
+    }
+}
