@@ -8,17 +8,20 @@ public class Solution{  //暴力破解法
              }
         }
       }
-      return nums;
+      return nums;   //因为题目假定给出的例子都是满足条件的，所以不存在譬如{0,3,4,0}，target=5的情况。否则需要抛出异常
+                     //抛出的异常为 throw new IllegalStateException("input has no solution");
   }
-  public static void printArr(int[] nums){ //打印数组
+  public static void printArr(int[] nums){ //打印数组，也可以用传统for循环的形式
          for(int num:nums){
-            System.out.print(num+" ");
-            System.out.println();
+            System.out.println(num+" ");
          }
   }
   public static void main(String[] args){
           int[] nums={0,3,4,0};
           int target=0;
-          printArr((new Solution()).twoSum(nums,target));
+          printArr((new Solution()).twoSum(nums,target)); 
+          //main函数调用printArr，故printArr为静态
+          //解题模板已给定 public int twoSum(int[] nums,int target),所以不能改为静态函数，printArr不能直接调用
+          //所以使用  (new 类名()).该非静态方法名  的形式达到间接调用的目的
   }
 }
