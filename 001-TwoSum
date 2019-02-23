@@ -25,3 +25,9 @@ public class Solution{  //暴力破解法
           //所以使用  (new 类名()).该非静态方法名  的形式达到间接调用的目的
   }
 }
+
+
+//Attention:
+//在Java中，数组和字符串的length用法是不一样的：
+//数组，如 int[] array={6,6,6}，则 array.length 此时长度length理解为属性而非方法，所以不加括号
+//字符创，如 String str="cool",则 str.length() 此时长度length（）理解为方法而非属性，要加括号
