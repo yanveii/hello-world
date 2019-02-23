@@ -3,9 +3,22 @@ public class Solution{  //暴力破解法
       for(int i=0;i<nums.length-1;i++){
         for(int j=i+1;j<nums.length;j++){
              if(target==nums[i]+nums[j]){
-                    
+                    int[] res={i,j};
+                    return res;
              }
         }
       }
+      return nums;
+  }
+  public static void printArr(int[] nums){ //打印数组
+         for(int num:nums){
+            System.out.print(num+" ");
+            System.out.println();
+         }
+  }
+  public static void main(String[] args){
+          int[] nums={0,3,4,0};
+          int target=0;
+          printArr((new Solution()).twoSum(nums,target));
   }
 }
