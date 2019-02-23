@@ -1,1 +1,2 @@
-# hello-world
+# 记录LeetCode的刷题进度
+  虽然慢 但是绝对不要放弃呀
