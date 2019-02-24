@@ -15,7 +15,7 @@ class Solution{
                //rev=temp;             
                //判断是否溢出？范围 -2147483648 ~ 2147483647 
                if()   
-                 return 0;
+                 return 0; //若溢出，则返回0
             
           }
     }
