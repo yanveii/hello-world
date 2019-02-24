@@ -1,3 +1,22 @@
 //在Java中，int是二进制位数32位。其包装类为：java.lang.Integer
 //最小值为 Integer.MIN_VALUE=-2147483648 (-2^31)
 //最大值为 Integer.MAX_VALUE=2147483647 (2^31-1)
+
+class Solution{
+    public int reverse(int x){
+          int rev=0;
+          while(x!=0){
+               int pop=0;
+               pop=x%10;    //x的值除以10之后取余数，如123%10的结果为3，赋给pop.即，每次取最末一位
+               x/=10;     //去掉x最后一位剩下的数，如123/10=12, x变为12
+               rev=rev*10+pop;   //每次将上次结果*10后再加上新进来的末尾数字
+           
+               //temp=rev*10+pop; //相当于push操作
+               //rev=temp;             
+               //判断是否溢出？范围 -2147483648 ~ 2147483647 
+               if()   
+                 return 0;
+            
+          }
+    }
+}
