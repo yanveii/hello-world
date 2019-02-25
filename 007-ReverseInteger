@@ -9,14 +9,21 @@ class Solution{
                int pop=0;
                pop=x%10;    //x的值除以10之后取余数，如123%10的结果为3，赋给pop.即，每次取最末一位
                x/=10;     //去掉x最后一位剩下的数，如123/10=12, x变为12
-               rev=rev*10+pop;   //每次将上次结果*10后再加上新进来的末尾数字
-           
+                  
                //temp=rev*10+pop; //相当于push操作
                //rev=temp;             
                //判断是否溢出？范围 -2147483648 ~ 2147483647 
-               if()   
+               if(rev>Integer.MAX_VALUE/10||(rev=Integer.MAXVALUE&&pop>7))   
                  return 0; //若溢出，则返回0
-            
+               if(rev<Integer.MAX_VALUE/10||(rev=Integer.MIN_VALUE&&pop<-8))
+                 return 0;     
+               rev=rev*10+pop;   //每次将上次结果*10后再加上新进来的末尾数字
+                 
           }
+          return rev;
+    }
+    public static void main(String[] args){
+          int x=123;
+          System.out.println((new Solution()).inverse(x));
     }
 }
