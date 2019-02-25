@@ -1,7 +1,11 @@
 00-java.lang.NullPointerException 
-  Stack<Integer> st=null;
-  error: "Null pointer access: The variable st can only be null at this location"
-  解决方法：必须进行初始化，如
-      Stack<Integer> st=new Stack<Integer>();
-      int[] numbers=new int[3];
+   Stack<Integer> st=null;
+   error: "Null pointer access: The variable st can only be null at this location"
+   解决方法：必须进行初始化，如
+          Stack<Integer> st=new Stack<Integer>();
+          int[] numbers=new int[3];
+      
+01-java.util.EmptyStackException
+   判断栈是否为空出错，可能是栈空了但仍在做取操作。判断栈空要用Stack()类自己的方法。
+    
   
