@@ -1,0 +1,7 @@
+00-java.lang.NullPointerException 
+  Stack<Integer> st=null;
+  error: "Null pointer access: The variable st can only be null at this location"
+  解决方法：必须进行初始化，如
+      Stack<Integer> st=new Stack<Integer>();
+      int[] numbers=new int[3];
+  
